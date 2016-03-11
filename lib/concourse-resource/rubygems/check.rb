@@ -1,4 +1,5 @@
 require 'contracts'
+require 'concourse-fuselage'
 require 'concourse-resource/rubygems/core'
 require 'concourse-resource/rubygems/gem_not_found'
 
