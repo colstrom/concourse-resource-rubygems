@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+
+STDERR.puts 'Not Implemented'
