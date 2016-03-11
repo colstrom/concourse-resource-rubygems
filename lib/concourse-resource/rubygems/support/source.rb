@@ -5,6 +5,9 @@ module ConcourseResource
     module Support
       # Params for GemResource
       module Source
+        include ::Contracts::Core
+        include ::Contracts::Builtin
+
         Contract None => String
         def gem
           @gem ||= source.fetch 'gem'
