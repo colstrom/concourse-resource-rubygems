@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'concourse-resource/rubygems/out'
+require 'concourse-resource/rubygems/check'
 
 rubygems = ConcourseResource::RubyGems::Out.new
 
