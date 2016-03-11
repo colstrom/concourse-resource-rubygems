@@ -15,6 +15,11 @@ module ConcourseResource
           STDERR.puts 'Params is missing gem'
           abort
         end
+
+        Contract None => String
+        def host
+          @host ||= source.fetch('host') { 'rubygems.org' }
+        end
       end
     end
   end
