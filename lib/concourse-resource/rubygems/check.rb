@@ -11,7 +11,7 @@ module ConcourseResource
 
       Contract None => ArrayOf[HashOf[String, String]]
       def versions
-        Gems
+        ::Gems
           .versions(gem)
           .tap { |response| raise GemNotFound, response if response.is_a? String }
           .sort_by { |version| version['created_at'] }
