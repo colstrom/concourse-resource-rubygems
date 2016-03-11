@@ -17,6 +17,7 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency 'concourse-fuselage', '~> 0.3', '>= 0.3.0'
   gem.add_runtime_dependency 'gems', '~> 0.8', '>= 0.8.3'
+  gem.add_runtime_dependency 'http', '~> 1.0', '>= 1.0.2'
 
   gem.add_development_dependency 'semver2', '~> 3.4', '>= 3.4.2'
 end
