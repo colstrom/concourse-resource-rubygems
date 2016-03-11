@@ -11,6 +11,9 @@ module ConcourseResource
 
       def filename
         @filename ||= "#{gem}-#{version.fetch 'number'}.gem"
+      rescue KeyError
+        STDERR.puts 'config.version is missing number', version
+        abort
       end
 
       def download
