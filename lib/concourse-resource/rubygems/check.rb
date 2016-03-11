@@ -18,5 +18,10 @@ module RubyGems
       STDERR.puts message
       abort
     end
+
+    Contract None => HashOf[String, String]
+    def latest
+      versions.last
+    end
   end
 end
