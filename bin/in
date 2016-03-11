@@ -1,3 +1,10 @@
 #!/usr/bin/env ruby
 
-STDERR.puts 'Not Implemented'
+require 'concourse-resource/rubygems/in'
+
+get = ConcourseResource::RubyGems::In.new
+
+unless get.run
+  STDERR.puts "Failed to fetch from RubyGems"
+  abort
+end
