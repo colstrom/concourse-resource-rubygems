@@ -29,7 +29,7 @@ Add the resource to your pipeline's ~resource_types~ (requires Concourse 0.74.0+
 
 * Behaviour
 
-** ~check~ Not Implemented
+** ~check~ Find the available versions for a gem
 
 *** Parameters
 
