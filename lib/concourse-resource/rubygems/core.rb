@@ -1,4 +1,5 @@
 require 'contracts'
+require 'concourse-resource/rubygems/source'
 
 module ConcourseResource
   module RubyGems
@@ -6,6 +7,7 @@ module ConcourseResource
     module Core
       include ::Contracts::Core
       include ::Contracts::Builtin
+      include Support::Source
     end
   end
 end
