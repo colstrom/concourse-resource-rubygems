@@ -1,7 +1,7 @@
 require 'contracts'
 require 'concourse-fuselage'
 require 'concourse-resource/rubygems/core'
-require 'http'
+require 'httparty'
 
 module ConcourseResource
   module RubyGems
@@ -14,11 +14,11 @@ module ConcourseResource
       end
 
       def download
-        @download ||= HTTP.get "https://#{host}/gems/#{filename}", follow: true
+        @download ||= HTTParty.get "https://#{host}/gems/#{filename}"
       end
 
       def fetch!
-        File.write "#{workdir}/#{filename}", download.flush
+        File.write "#{workdir}/#{filename}", download
       end
     end
   end
