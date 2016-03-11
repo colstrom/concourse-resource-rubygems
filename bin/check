@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'concourse-resource/rubygems/out'
+
+rubygems = ConcourseResource::RubyGems::Out.new
+
+unless rubygems.run
+  STDERR.puts "Failed to check RubyGems"
+  abort
+end
