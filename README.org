@@ -20,11 +20,12 @@ Add the resource to your pipeline's ~resource_types~ (requires Concourse 0.74.0+
 
 * Source Configuration
 
-|------+----------+---------------------|
-| Name | Required | Description         |
-|------+----------+---------------------|
-| gem  | Yes      | The name of the gem |
-|------+----------+---------------------|
+|------+----------+--------------+---------------------|
+| Name | Required | Default      | Description         |
+|------+----------+--------------+---------------------|
+| gem  | Yes      |              | The name of the gem |
+| host | No       | rubygems.org | The RubyGems host   |
+|------+----------+--------------+---------------------|
 
 * Behaviour
 
@@ -36,7 +37,13 @@ Add the resource to your pipeline's ~resource_types~ (requires Concourse 0.74.0+
 
 ** ~out~ Not Implemented
 
-** ~in~ Not Implemented
+** ~in~ Fetch a gem
+
+Fetches a gem and places it in ~#workdir~
+
+*** Parameters
+
+- None
 
 * License
 
