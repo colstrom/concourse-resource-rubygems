@@ -16,6 +16,10 @@ module ConcourseResource
       def download
         @download ||= HTTP.get "https://#{host}/gems/#{filename}", follow: true
       end
+
+      def fetch!
+        File.write "#{workdir}/#{filename}", download.flush
+      end
     end
   end
 end
