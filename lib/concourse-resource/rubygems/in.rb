@@ -7,6 +7,10 @@ module ConcourseResource
     # In Step
     class In < Fuselage::In
       include Core
+
+      def filename
+        @filename ||= "#{gem}-#{version.fetch 'number'}.gem"
+      end
     end
   end
 end
