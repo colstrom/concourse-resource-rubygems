@@ -16,7 +16,7 @@ module ConcourseResource
           .versions(gem)
           .tap { |response| raise GemNotFound, response if response.is_a? String }
           .sort_by { |version| version['created_at'] }
-          .map { |version| { 'version' => version.fetch('number') } }
+          .map { |version| { 'number' => version.fetch('number') } }
       rescue GemNotFound => message
         STDERR.puts message
         abort
