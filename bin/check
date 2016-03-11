@@ -2,9 +2,9 @@
 
 require 'concourse-resource/rubygems/check'
 
-rubygems = ConcourseResource::RubyGems::Check.new
+check = ConcourseResource::RubyGems::Check.new
 
-unless rubygems.run
+unless check.run
   STDERR.puts "Failed to check RubyGems"
   abort
 end
