@@ -23,5 +23,10 @@ module RubyGems
     def latest
       versions.last
     end
+
+    Contract HashOf[String, String] => ArrayOf[HashOf[String, String]]
+    def since(version)
+      versions[versions.index(version)..-1]
+    end
   end
 end
