@@ -2,7 +2,7 @@
 
 require 'concourse-resource/rubygems/check'
 
-rubygems = ConcourseResource::RubyGems::Out.new
+rubygems = ConcourseResource::RubyGems::Check.new
 
 unless rubygems.run
   STDERR.puts "Failed to check RubyGems"
