@@ -1,0 +1,47 @@
+#+TITLE: RubyGems Concourse Resource
+#+SUBTITLE: A Custom Resource for Concourse
+#+LATEX: \pagebreak
+
+* Overview
+
+RubyGems Integration for Concourse Pipelines.
+
+* Usage
+
+Add the resource to your pipeline's ~resource_types~ (requires Concourse 0.74.0+)
+
+#+BEGIN_SRC yaml
+  resource_types:
+    - name: rubygems
+      type: docker-image
+      source:
+        repository: resource/rubygems
+#+END_SRC
+
+* Source Configuration
+
+|------+----------+---------------------|
+| Name | Required | Description         |
+|------+----------+---------------------|
+| gem  | Yes      | The name of the gem |
+|------+----------+---------------------|
+
+* Behaviour
+
+** ~check~ Not Implemented
+
+*** Parameters
+
+- None
+
+** ~out~ Not Implemented
+
+** ~in~ Not Implemented
+
+* License
+
+Apache 2.0 License, see ~LICENSE.txt~ for details.
+
+* Contributors
+
+- [[https://colstrom.github.io/][Chris Olstrom]] | [[mailto:chris@olstrom.com][e-mail]] | [[https://twitter.com/ChrisOlstrom][Twitter]]
