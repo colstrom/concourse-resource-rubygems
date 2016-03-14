@@ -1,8 +1,8 @@
-require 'contracts'
 require 'concourse-fuselage'
+require 'contracts'
+require 'gems'
 require_relative 'core'
 require_relative 'gem_not_found'
-require 'gems'
 
 module ConcourseResource
   module RubyGems
