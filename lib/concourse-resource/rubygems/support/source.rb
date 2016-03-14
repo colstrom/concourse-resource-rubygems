@@ -20,6 +20,14 @@ module ConcourseResource
         def host
           @host ||= source.fetch('host') { 'rubygems.org' }
         end
+
+        Contract None => String
+        def api_key
+          @api_key ||= source.fetch 'api_key'
+        rescue KeyError
+          STDERR.puts 'Source is missing api_key'
+          abort
+        end
       end
     end
   end
