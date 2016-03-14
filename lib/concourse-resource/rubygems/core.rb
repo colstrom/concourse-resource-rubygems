@@ -1,5 +1,5 @@
 require 'contracts'
-require 'concourse-resource/rubygems/support/source'
+require_relative 'support/source'
 
 module ConcourseResource
   module RubyGems
