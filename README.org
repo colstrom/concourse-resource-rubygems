@@ -44,7 +44,15 @@ Fetches a gem and places it in ~#workdir~
 
 - None
 
-** ~out~ Not Implemented
+** ~out~ Publish a gem
+
+*** Parameters
+
+|------+----------+------------------+--------------------------------------|
+| Name | Required | Default          | Description                          |
+|------+----------+------------------+--------------------------------------|
+| glob | no       | pkg/#{gem}-*.gem | Globbing pattern for files to upload |
+|------+----------+------------------+--------------------------------------|
 
 * License
 
