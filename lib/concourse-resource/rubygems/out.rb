@@ -13,6 +13,11 @@ module ConcourseResource
       def glob
         @glob ||= params.fetch('glob') { "#{workdir}/pkg/#{gem}-*.gem" }
       end
+
+      Contract None => ArrayOf[String]
+      def files
+        @files ||= Dir.glob glob
+      end
     end
   end
 end
