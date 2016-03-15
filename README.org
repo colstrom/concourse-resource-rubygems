@@ -38,7 +38,7 @@ Add the resource to your pipeline's ~resource_types~ (requires Concourse 0.74.0+
 
 ** ~in~ Fetch a gem
 
-Fetches a gem and places it in ~#workdir~
+Fetch a gem.
 
 *** Parameters
 
