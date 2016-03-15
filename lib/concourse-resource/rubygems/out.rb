@@ -1,6 +1,7 @@
 require 'concourse-fuselage'
 require 'contracts'
 require 'gems'
+require_relative 'ambiguous_glob'
 require_relative 'core'
 require_relative 'support/source'
 
@@ -17,7 +18,12 @@ module ConcourseResource
 
       Contract None => ArrayOf[String]
       def files
-        @files ||= Dir.glob glob
+        @files ||= Dir.glob(glob).tap do |matches|
+          raise AmbiguousGlob, matches if matches.size > 1
+        end
+      rescue AmbiguousGlob => error
+        STDERR.puts "Glob #{glob} matches too many files", error.message
+        abort
       end
 
       Contract None => Any
