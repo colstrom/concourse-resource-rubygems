@@ -1,5 +1,6 @@
 require 'concourse-fuselage'
 require 'contracts'
+require 'gems'
 require_relative 'core'
 require_relative 'support/source'
 
@@ -17,6 +18,13 @@ module ConcourseResource
       Contract None => ArrayOf[String]
       def files
         @files ||= Dir.glob glob
+      end
+
+      Contract None => Any
+      def configure!
+        Gems.configure do |api|
+          api.key = api_key
+        end
       end
     end
   end
