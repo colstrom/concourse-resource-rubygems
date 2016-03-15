@@ -26,6 +26,11 @@ module ConcourseResource
           api.key = api_key
         end
       end
+
+      def update!
+        configure!
+        files.each { |file| Gems.push file }
+      end
     end
   end
 end
