@@ -12,7 +12,7 @@ module ConcourseResource
 
       Contract None => String
       def glob
-        @glob ||= params.fetch('glob') { "#{workdir}/pkg/#{gem}-*.gem" }
+        @glob ||= params.fetch('glob') { "pkg/#{gem}-*.gem" }
       end
 
       Contract None => ArrayOf[String]
