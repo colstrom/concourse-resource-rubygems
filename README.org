@@ -36,8 +36,6 @@ Add the resource to your pipeline's ~resource_types~ (requires Concourse 0.74.0+
 
 - None
 
-** ~out~ Not Implemented
-
 ** ~in~ Fetch a gem
 
 Fetches a gem and places it in ~#workdir~
@@ -45,6 +43,8 @@ Fetches a gem and places it in ~#workdir~
 *** Parameters
 
 - None
+
+** ~out~ Not Implemented
 
 * License
 
