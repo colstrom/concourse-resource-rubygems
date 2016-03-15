@@ -20,12 +20,13 @@ Add the resource to your pipeline's ~resource_types~ (requires Concourse 0.74.0+
 
 * Source Configuration
 
-|------+----------+--------------+---------------------|
-| Name | Required | Default      | Description         |
-|------+----------+--------------+---------------------|
-| gem  | Yes      |              | The name of the gem |
-| host | No       | rubygems.org | The RubyGems host   |
-|------+----------+--------------+---------------------|
+|---------+----------+--------------+----------------------|
+| Name    | Required | Default      | Description          |
+|---------+----------+--------------+----------------------|
+| gem     | Yes      |              | The name of the gem  |
+| host    | No       | rubygems.org | The RubyGems host    |
+| api_key | Yes      |              | Key for RubyGems API |
+|---------+----------+--------------+----------------------|
 
 * Behaviour
 
