@@ -1,0 +1,39 @@
+PATH
+  remote: .
+  specs:
+    concourse-resource-rubygems (0.3.1)
+      concourse-fuselage (~> 0.3, >= 0.3.0)
+      gems (~> 0.8, >= 0.8.3)
+      httparty (~> 0.13, >= 0.13.7)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    coderay (1.1.1)
+    concourse-fuselage (0.5.2)
+      contracts (~> 0.13, >= 0.13.0)
+    contracts (0.13.0)
+    gems (0.8.3)
+    httparty (0.13.7)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.3)
+    method_source (0.8.2)
+    multi_xml (0.5.5)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    semver2 (3.4.2)
+    slop (3.6.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  concourse-resource-rubygems!
+  pry
+  semver2 (~> 3.4, >= 3.4.2)
+
+BUNDLED WITH
+   1.11.2

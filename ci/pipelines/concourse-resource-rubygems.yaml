@@ -1,0 +1,63 @@
+---
+resource_types:
+  - name: rubygems
+    type: docker-image
+    source:
+      repository: resource/rubygems
+  - name: github-status
+    type: docker-image
+    source:
+      repository: resource/github-status
+
+resources:
+  - name: src
+    type: git
+    source:
+      uri: https://github.com/colstrom/concourse-resource-rubygems
+      branch: develop
+  - name: resource
+    type: docker-image
+    source:
+      repository: resource/rubygems
+  - name: gem
+    type: rubygems
+    source:
+      gem: concourse-resource-rubygems
+  - name: status
+    type: github-status
+    source:
+      repo: colstrom/concourse-resource-rubygems
+      access_token: {{secret-github-access-token}}
+
+jobs:
+- name: rubygems-test
+  plan:
+  - get: src
+    trigger: true
+  - get: resource
+    trigger: true
+  - get: gem
+    trigger: true
+  - task: arbitrary-step
+    config:
+      platform: linux
+      image: docker:///resource/rubygems#latest
+      inputs:
+        - name: src
+        - name: gem
+      run:
+        path: ruby
+        args:
+          - -rconcourse-resource/rubygems
+          - -e "puts 1"
+  - put: gem
+    params:
+      build: src
+- name: github-status-test
+  plan:
+    - get: src
+      trigger: true
+    - put: status
+      params:
+        path: src
+        state: success
