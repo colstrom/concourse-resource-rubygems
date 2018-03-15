@@ -3,7 +3,7 @@ require_relative 'lib/concourse-resource/rubygems/version'
 Gem::Specification.new do |gem|
   gem.name          = 'concourse-resource-rubygems'
   gem.version       = ConcourseResource::RubyGems::VERSION
-  gem.license       = 'Apache-2.0'
+  gem.licenses      = ['MIT']
   gem.summary       = 'Concourse Resource for RubyGems'
 
   gem.author        = 'Chris Olstrom'

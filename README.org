@@ -56,7 +56,9 @@ Fetch a gem.
 
 * License
 
-Apache 2.0 License, see ~LICENSE.txt~ for details.
+
+  ~concourse-resource-rubygems~ is available under the [[https://tldrlegal.com/license/mit-license][MIT License]]. See
+  ~LICENSE.txt~ for the full text.
 
 * Contributors
 
